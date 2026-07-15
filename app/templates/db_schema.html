@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content-card text-center">
+    <h2 class="h4 mb-2">Database Overview</h2>
+    <p class="text-muted">A quick glance at the live data stored in the local prototype database.</p>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="p-4 border rounded">
+                <h3>{{ clients }}</h3>
+                <p class="mb-0">Registered Clients</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4 border rounded">
+                <h3>{{ bookings }}</h3>
+                <p class="mb-0">Bookings</p>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <h5>Schema Diagram</h5>
+        <img src="{{ url_for('static', filename='images/er.svg') }}" alt="ER Diagram" style="max-width:680px;width:100%;height:auto;">
+    </div>
+    <a class="btn btn-outline-secondary mt-3" href="/static/docs/database_schema.md">View schema docs</a>
+</div>
+{% endblock %}

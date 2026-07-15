@@ -1,0 +1,122 @@
+Reyann Mohammed  
+20240298  
+Project Proposal  and Justification  
+Project Title : The implementation of an Automated Client Booking an d Itinerary 
+Management System for IsleGo Travel & Logistics .  
+Introduction of the Organisation  
+IsleGo Travel & Logistics  is a boutique travel management agency based in Trinidad and 
+Tobago that specialises in curated group va cations, corporate retreats and local eco-
+tourism excursions. The agency handles cust om travel planning , regional transportation 
+logistics and client scheduling for both domestic  weekends staycations and 
+international incoming travellers . 
+Project Overview  
+This project involves the procurement , customization and deployment of a centralized  
+cloud-based project manage ment and client booking platform. The system will 
+automate the creation of travel itin eraries, coordinat e vendor payments (hotels,  
+transport , tours) an d provide a collaborat ive workspace where travel coordinat ors can 
+manage multiple vacation project simultaneou sly.   
+Problem Statement  
+IsleGo Travel & Lo gistics currently relies on manual spreadsheet s, disconnected 
+calendar apps and fragmen ted email t hreads to manage comple x group vac ation 
+itineraries. As the volume of booking increases , this manual workflo w has resulted in an 
+average response time  of 48 hours for client inquiries, a 15% rate of s cheduling 
+overnights ( such as missed tour bookings ) and sever e commun ication bottlenec ks 
+between team members . Without a structured digital s ystem, the administrati ve 
+overhead is capping the agency ’s revenue growth and hurting customer  satisfaction.  
+Project Goals  & Objectives  
+• To fully cu stomize and deploy the new cloud-based booking and proje ct tracking 
+platform within a strict 3-week implementation window.  
+• To drastically improve customer s ervice delivery by reducing cli ent itinerary 
+response and confirmation times from 48 hours to under 4 hours b y the end of 
+the rollou t.  
+• To achieve o perational excellence by reducing internal scheduling and vendor 
+booking errors to 0% wi thin two months of the system launch .  
+• To train 100% of the agency ‘s travel coordinato rs to navigate and update the new 
+system fluently before the pe ak vacation seasons begins.  
+
+Need Analysis  
+User (Staff & Client) Needs  
+Travel Coordinators  – Need a visual, collaborative tool specifically utilizing i ntegrated 
+timelines and task dependencie s to track planning phases, vendor con firmation 
+deadlines and client de posits without digging through mess y shared drives .  
+Management - Requires high-level, real -time visibility into the status of every activ e 
+vacation project, resource workloads and overall operationa l capacity to ensure no  
+customer requests declines.  
+Clients- Demand fast, accurate and professional looking itinerary drafts and real -time 
+updates when booki ng details change .  
+ 
+Organization Nee ds  
+Operational Scalability - The agency’s strategic business goa l is to scale quarterly 
+booking capacity by 3 0%. The current manu al infrastructure  physically ca nnot support 
+this growth without causing employee burnout.  
+Centralized Data Repository  – The business  needs a single source of t ruth where all 
+client’s preferences , passport details and vendor contracts are secure ly stored and tied 
+to specific travel  projects.  
+ 
+Evidence of Need  
+Internal operation al audits fr om the past quarter indicated that trav el coordinators 
+spend an  average of 12 hours per week simply updating spreadsheets and manually 
+cross-referencing  team calenda rs. Furthermore , customer  feedback d ata collected over 
+the last 6 months revealed that 25% of clients cited “slow communication  and delayed 
+itinerary updated during the planning phase ” as their primary f rustration with the 
+agency.  
+ 
+Consequence of Inaction  
+If IsleGo Travel & Logistics maintains its current manual workflow , its faces a projected 
+10% drop in cust omer retention due to slow service speeds, costly financial losses fro m 
+human errors in manual vendor bookings a nd an absolute in ability to scale and accept 
+profitable corporate group package s during peak travel seasons.  
+ 
+
+Feasibility Stud y  
+Technical Feasibility  
+The project is highly feasible because it u tilizes an established  low code Software as a 
+Service (SaaS) project management platform, (such as Team Gantt  or a similar cloud 
+tool).  
+Because it is a cloud-based solution, it requires zero capital expenditure on physical 
+server infrastructure  or specialized software developers.  
+The technical requirements are strictly limited to standard office computers and stable 
+internet access both of which the  organizat ion already possesses .  
+The platform features an intuitive drag and drops interface making it technically 
+accessible to staff members with basic computer literacy skills.  
+ 
+ Economic Feasibility (Cost Benefit Analysis)  
+Projected Costs – The Financial investment  is exceptionally low risk consisting of a 
+software subscription fee ($15 USD per user/month for 10 months) and a one-time staff 
+training allocation o f $250 USD for learning resources.  
+Projected Benefits - Automating the itinerary workflow is calculated to reclaim 10 hours 
+of lost productivity per staff members each week. Across 1 0 coordinators, this equates 
+to 100 hours of recovered labo ur capacity per week. This new ly freed operational 
+capacity allows the agency to take on an additional 5 to 7 large group  vacation packages 
+per month easily recovering the soft ware’s annual subscription cost within the very first 
+month of deployment.  
+Operational Feasibility  
+The main hurdle to operational feasibility i s user adoption (getting staff to change their 
+daily habits from spreadsheet s to the new platform). To ensure s mooth ad option, the 
+project plan incorporates a mandatory , structure d 3-day internal training workshop 
+during the rollout phrase . The software ’s visual nature (clear timeline s and colour- 
+coded tasks ) makes it easy for travel coordinators to  see the immediate benefits of their 
+daily workload ensuring high operational buy in.  
+ 
+ 
+ 
+ 
+
+Schedule ( Time) Feasibility  
+The project is highly realistic and doable within a tight structure three-week lifecycle 
+broken down into clear operational phases:  
+Week 1 (Configuration) – Account setup, custom template  creation (mapping out 
+standard vacation milestones) and migrating active client data into the system.  
+Week 2 (Training & Testing ) – Running the 3-day staff training workshop s and pilot -
+testing the platform with a single upcoming weekend tour project .  
+Week 3 (Go Live) – Full system launch transitioning all active travel project s to the 
+platform and officially decommissioning the old spre adsheet tracking system.  
+ 
+Conclusion   
+The implementation of an automated client booking and iti nerary management sys tem 
+is a low-cost, high impact project that directly addresses the operational bottlenec ks of 
+IsleGo Travel  & Logistics . By replacing outdated man ual practices with a centralized 
+cloud platform , the agency will immediately inc rease efficiency , eliminate costly 
+scheduling errors and position itself to scale sustainably. Given its minimal technical 
+risk, rapid time to market and clear financial returns , the project is exceptionally  
+feasible and high justified.  

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="72" viewBox="0 0 240 72">
+  <defs>
+    <linearGradient id="lg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffbe2e"/>
+      <stop offset="100%" stop-color="#ff6b6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="72" rx="10" fill="none"/>
+  <!-- emblem -->
+  <g transform="translate(8,6)">
+    <circle cx="28" cy="30" r="26" fill="#0f4c81" />
+    <g transform="translate(8,6)">
+      <path d="M2 18 C6 8, 22 6, 26 12 C30 18, 20 22, 12 22 C8 22,4 20,2 18 Z" fill="#fff"/>
+      <rect x="18" y="4" width="12" height="3" rx="1.2" fill="#ffd166" transform="rotate(-20 24 5.5)"/>
+    </g>
+  </g>
+  <!-- text -->
+  <g transform="translate(72,18)">
+    <text x="0" y="12" font-family="Inter, Arial" font-size="20" font-weight="700" fill="#0f4c81">ISLEGO TRAVEL</text>
+    <text x="0" y="34" font-family="Inter, Arial" font-size="10" fill="#2a7fbe">&amp; LOGISTICS</text>
+  </g>
+</svg>

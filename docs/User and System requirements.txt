@@ -1,0 +1,251 @@
+Introduction  
+This document outlines the User and System Requirements for the Automated Client 
+Booking and Itinerary Management System at IsleGo Travel & Logistics. The purpose of 
+this system is to replace the agency's manual, spreadsheet -based workflows with a 
+centralized, cloud -based platform. By automating itinerary creation, coordinating 
+vendor payments  and providing a collaborative workspace, the system aims to reduce 
+client response times, eliminate scheduling errors, and support the agency's goal of 
+scaling booking capacity by 30%.  
+ 
+ User Requirements  
+User requirements define what the different stakeholders (Travel Coordinators, 
+Management  and Clients) need the system to do in order to  perform their tasks 
+effectively.  
+ 
+Travel Coordinators  
+Travel Coordinators are the primary internal users of the system. They require tools that 
+streamline the planning and execution of complex group vacations.  
+•Visual Task Management: Coordinators must be able to view project timelines, task 
+dependencies  and milestones through a visual interface (such as a Gantt chart or 
+Kanban board).  
+•Automated Itinerary Generation: The system must allow coordinators to automatically 
+generate professional itinerary drafts based on inputted booking data  and reducing 
+manual formatting time.  
+•Vendor Coordination: Coordinators must be able to track vendor confirmation 
+deadlines, payment schedules (hotels, transport, tours)  and contract statuses within 
+specific travel projects.  
+•Centralized Client Data: Coordinators require immediate access to a secure, 
+centralized repository containing client preferences, passport details  and historical 
+booking data.  
+ 
+ 
+ 
+ 
+
+Management  
+Management requires oversight capabilities to ensure operational efficiency and to 
+monitor the agency's capacity.  
+•Real-Time Dashboard: Management must have access to a high -level dashboard 
+providing real -time visibility into the status of all active vacation projects.  
+•Resource Allocation: The system must allow management to view staff workloads and 
+operational capacity to ensure that no customer requests are declined due to 
+mismanaged resources.  
+•Performance Tracking: Management needs the ability to track key performance 
+indicators, specifically client response times and the frequency of scheduling errors.  
+ 
+Clients  
+Clients interact with the outputs of the system and require timely, accurate  and 
+professional communication.  
+•Professional Documentation: Clients must receive fast, accurate, and professional -
+looking itinerary drafts.  
+•Real-Time Updates: Clients require automated or rapid updates when booking details, 
+schedules, or vendor confirmations change.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ System Requirements  
+System requirements specify the technical capabilities, constraints  and performance 
+standards the software must meet to satisfy the user requirements. These are divided 
+into Functional and Non -Functional requirements.  
+3.1 Functional Requirements  
+Functional requirements describe the specific behaviours  and functions the system 
+must support.  
+Requirement ID  Feature Category  Description  
+FR-01 Data Management  The system shall provide a 
+centralized database to 
+securely store client 
+profiles, including 
+passport details, dietary 
+preferences, and contact 
+information.  
+ 
+ 
+FR-02 Project Tracking  The system shall support 
+the creation of individual 
+"travel projects" with 
+customizable templates 
+for standard vacation 
+milestones.  
+ 
+ 
+FR-03 Task Dependencies  The system shall allow 
+users to link tasks (e.g., 
+"Book Hotel" must 
+precede "Send Final 
+Itinerary") and visually 
+display these 
+dependencies.  
+ 
+ 
+FR-04 Document Generation  The system shall 
+automatically generate 
+client-facing itinerary 
+documents by pulling data 
+from the project timeline 
+and vendor details.  
+ 
+ 
+
+FR-05 Vendor Management  The system shall track 
+vendor payment deadlines 
+and contract statuses, 
+triggering alerts for 
+upcoming or overdue 
+actions.  
+ 
+ 
+FR-06 Collaboration  The system shall allow 
+multiple travel 
+coordinators to access, 
+edit, and leave comments 
+on the same travel project 
+simultaneously.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ Non-Functional Requirements  
+Non-functional requirements define system attributes such as performance, usability, 
+and security.  
+Requirement ID  Attribute  Description  
+NFR-01 Performance  The system must facilitate 
+a reduction in client 
+itinerary response and 
+confirmation times from 
+48 hours to under 4 hours.  
+ 
+ 
+NFR-02 Accuracy  The system's automated 
+validation and centralized 
+data must support the 
+operational goal of 
+reducing internal 
+scheduling and vendor 
+booking errors to 0%.  
+ 
+ 
+NFR-03 Usability  The system must feature 
+an intuitive, drag -and-drop 
+interface (low -code SaaS) 
+that requires no 
+specialized technical 
+skills, ensuring 100% staff 
+adoption after a 3 -day 
+training workshop.  
+ 
+ 
+NFR-04 Accessibility  As a cloud -based 
+platform, the system must 
+be accessible via standard 
+office computers and 
+standard web browsers 
+with a stable internet 
+connection.  
+ 
+ 
+NFR-05 Security  The system must securely 
+store sensitive client 
+information (e.g., passport 
+details) in compliance with 
+standard data protection 
+protocols, utilizing role -
+
+based access control to 
+restrict data visibility.  
+ 
+ 
+NFR-06 Scalability  The system architecture 
+must be capable of 
+supporting a 30% increase 
+in quarterly booking 
+capacity (an additional 5 to 
+7 large group packages per 
+month) without degrading 
+performance.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Hardware and Software Specifications  
+To ensure the successful implementation , the following technical specifications are 
+defined for the booking platform.  
+ Software Specifications  
+•Operating System: Compatible with Windows 10/11 and macOS for internal staff use.  
+•Web Browser: Optimized for the latest versions of Google Chrome, Microsoft Edge, and 
+Safari.  
+•Platform: Low -code SaaS Project Management and CRM platform (e.g., TeamGantt, 
+Monday.com  or similar cloud -based booking solution).  
+•Integration: Capability to integrate with standard email clients (Outlook/Gmail) and 
+calendar applications for automated notification syncing.  
+•Database: Cloud -hosted SQL or NoSQL database provided by the SaaS vendor with 
+automatic daily backups.  
+ Hardware Specifications  
+•Internal Workstations: Standard office laptops or desktops with a minimum of 8GB 
+RAM and an i5 processor (or equivalent) to handle browser -based multitasking.  
+•Network Infrastructure: Stable high -speed internet connection (minimum 10 Mbps 
+upload/download) to ensure real -time synchronization of the cloud platform.  
+•Mobile Access: Smartphones or tablets (iOS/Android) for travel coordinators to access 
+project statuses while in the field or during eco -tourism excursions.  
+ Conclusion  
+These requirements have been developed to directly address the operational 
+inefficiencies identified at IsleGo Travel & Logistics. By focusing on automated itinerary 
+generation and centralized data management, the proposed system provides a robust 
+solution that is both technically feasible and economically justified.  
+ 

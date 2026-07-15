@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="h3 mb-1">Create New Travel Booking</h2>
+            <p class="text-muted mb-0">Capture client details, itinerary preferences, and booking status in one professional form.</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">Back to Dashboard</a>
+    </div>
+
+    <form method="post">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Booking Code</label>
+                <input name="booking_code" class="form-control" placeholder="e.g. ISL-2048" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Destination</label>
+                <input name="destination" class="form-control" placeholder="e.g. Santorini, Greece" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Travel Date</label>
+                <input type="date" name="travel_date" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Status</label>
+                <select name="status" class="form-select">
+                    <option>Pending</option>
+                    <option>Confirmed</option>
+                    <option>Cancelled</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Client Name</label>
+                <input name="client_name" class="form-control" placeholder="Full name" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Client Email</label>
+                <input type="email" name="client_email" class="form-control" placeholder="client@email.com" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Client Phone</label>
+                <input name="client_phone" class="form-control" placeholder="Phone number" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Company</label>
+                <input name="client_company" class="form-control" placeholder="Company name">
+            </div>
+            <div class="col-12">
+                <label class="form-label fw-semibold">Trip Notes</label>
+                <textarea name="notes" class="form-control" rows="4" placeholder="Add itinerary details, special requests, or travel preferences..."></textarea>
+            </div>
+        </div>
+        <div class="mt-4 d-flex gap-2">
+            <button class="btn btn-primary" type="submit">Save Booking</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

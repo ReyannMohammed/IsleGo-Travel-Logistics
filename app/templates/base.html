@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IsleGo Travel Booking System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f4f8ff 0%, #eef6ff 100%);
+            color: #17324d;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #0f4c81 0%, #2a7fbe 100%) !important;
+            box-shadow: 0 4px 18px rgba(15, 76, 129, 0.2);
+        }
+        .hero-panel {
+            background: linear-gradient(120deg, rgba(7, 41, 72, 0.8), rgba(42, 127, 190, 0.7)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80') center/cover;
+            border-radius: 24px;
+            color: white;
+            padding: 48px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .hero-panel h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        .hero-panel p {
+            font-size: 1.05rem;
+            max-width: 640px;
+        }
+        .feature-card {
+            border: none;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.1);
+            background: white;
+        }
+        .feature-card img {
+            height: 180px;
+            object-fit: cover;
+        }
+        .content-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.08);
+        }
+        .badge-soft {
+            background: #eaf6ff;
+            color: #0f4c81;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container d-flex align-items-center">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='images/logo-user.svg') }}" alt="IsleGo logo" height="42" style="margin-right:12px">
+            <span>IsleGo Travel & Logistics</span>
+        </a>
+        <div class="ms-auto">
+            <a class="nav-link d-inline-block text-white me-3" href="{{ url_for('index') }}">Home</a>
+            <a class="nav-link d-inline-block text-white me-3" href="{{ url_for('deals') }}">Deals</a>
+            <a class="nav-link d-inline-block text-white me-3" href="{{ url_for('about') }}">About</a>
+            <a class="nav-link d-inline-block text-white me-3" href="{{ url_for('contact') }}">Contact</a>
+            <a class="btn btn-light btn-sm" href="{{ url_for('new_booking') }}">New Booking</a>
+        </div>
+    </div>
+</nav>
+<div class="container py-4">
+    <section class="hero-panel">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <!-- UPDATED-HERO-2026 -->
+                <h2 class="hero-subtitle mb-2">Trusted Travel Concierge</h2>
+                <h1 class="mt-2 display-6">Plan unforgettable journeys with ease</h1>
+                <p class="mt-3 lead">From luxury escapes to business travel, IsleGo helps clients book smoothly with real-time itinerary planning and professional support. Beautiful itineraries, zero stress.</p>
+                <div class="mt-3">
+                    <a href="{{ url_for('deals') }}" class="btn btn-outline-light me-2">View Deals</a>
+                    <a href="{{ url_for('new_booking') }}" class="btn btn-light text-primary fw-bold">Create Booking</a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center d-none d-lg-block">
+                <div class="glass-card p-4">
+                    <h5 class="mb-2">Fast, reliable, elegant</h5>
+                    <p class="mb-0 small">24/7 support for clients, operators, and travel planners.</p>
+                    <ul class="mt-3 text-start">
+                        <li>Centralized team workspace</li>
+                        <li>Automated vendor coordination</li>
+                        <li>Polished client itineraries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% block content %}{% endblock %}
+</div>
+<footer class="py-4">
+    <div class="container text-center text-muted small">
+        &copy; IsleGo Travel & Logistics — Professional booking management
+    </div>
+</footer>
+</body>
+</html>

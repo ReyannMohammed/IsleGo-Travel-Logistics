@@ -1,0 +1,278 @@
+Introduction  
+This expanded guide provides a detailed  technical approach for the product development and 
+configuration of the Automated Client Booking and Itinerary Management System for IsleGo 
+Travel & Logistics. It translates the approved design specifications and requirements into 
+granular, actionable task s focusing on the practical setup and customization of the chosen 
+low-code SaaS platform. This document serves as a comprehensive roadmap for the 
+development phase.  
+Platform Setup and Account Configuration  
+This is the initial setup of the SaaS platform, user accounts  and foundational security 
+measures.  
+SaaS Platform Selection and Subscription  
+• Action:  Finalize the selection of a low -code SaaS project management platform (e.g., 
+Team Gantt , Monday.com, Click Up  or similar). The platform must explicitly support 
+custom fields, automation rules, API integrations  and robust user role management.  
+• Responsibility:  Project Lead er  
+• Verification:  Confirm active subscription, access to administrative features  and 
+review platform documentation for API capabilities and customization options.  
+User Account Creation and Role Assignment  
+• Action:  Create individual user accounts for all Travel Coordinators (e.g., 10 users) 
+and Management personnel (e.g., 2 users) within the SaaS platform.  
+• Responsibility:  Project Lead er 
+• Details:  
+◦ Travel Coordinator Role:  Assign permissions for creating, editing  and viewing 
+all project -related data, including client details, vendor information  and 
+itinerary content. They should have access to generate and send itineraries.  
+◦ Management Role:  Assign permissions for viewing all project data, accessing 
+dashboards and reports, but limited editing capabilities on core project data to 
+maintain data integrity. They should have oversight of all coordinator 
+activities.  
+◦ Administrator Role : Full access to all system configurations, user management  
+and data import/export functions.  
+• Verification:  Each user can log in  to access features relevant to their role  and verify 
+that unauthorized actions are restricted (NFR -05). 
+ 
+ 
+
+Template Creation and Customization  
+This focuses on configuring project and itinerary templates  including the definition of custom 
+data fields essential for IsleGo's operations.  
+Standard Vacation Project Template  
+• Action:  Design and implement a standard project template within the SaaS platform 
+for typical group vacations.  
+• Responsibility:  Project Lead er 
+• Details:  The template should include:  
+◦ Pre-defined Task Lists:  A sequence of tasks for each project phase (e.g., 
+"Client Onboarding," "Itinerary Planning," "Vendor Booking," "Client 
+Finalization," "Post -Travel Follow -up").  
+◦ Milestones:  Key project checkpoints (e.g., "Client Deposit Received," "All 
+Vendors Confirmed," "Final Itinerary Sent").  
+◦ Custom Fields (Project Level):  
+• Client_Name  (Text)  
+• Client_Email  (Email)  
+• Client_Phone  (Phone Number)  
+• Travel_Dates  (Date Range)  
+• Destination  (Dropdown: Caribbean, Europe, Asia, Local, etc.)  
+• Project_Status  (Dropdown: Inquiry, Draft, Confirmed, Completed, 
+Cancelled)  
+• Assigned_Coordinator  (User/Team Member)  
+• Estimated_Budget  (Currency)  
+• Actual_Cost  (Currency)  
+• Verification:  New projects can be initiated using this template, pre -populating 
+essential tasks and fields  and all custom fields are visible and editable.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Itinerary Draft Template  
+• Action:  Create a customizable itinerary draft template that can be automatically 
+populated with project data and exported in a professional format (e.g., PDF or web 
+link).  
+• Responsibility:  Project Lead er  
+• Details:  This template should align with the UI design concepts for the Client 
+Itinerary View (Section 5.3 of Design Specifications) and support FR -04. It should 
+include dynamic sections for:  
+◦ Daily Schedule:  Date, Time, Activity Description, Location, Notes.  
+◦ Accommodation:  Hotel Name, Check -in/Check -out, Confirmation #, Address, 
+Contact.  
+◦ Transportation:  Flight/Train/Bus Details, Departure/Arrival Times, 
+Confirmation #.  
+◦ Vendor Contact Information:  Emergency contacts for hotels, guides, transport.  
+◦ Custom Fields (Itinerary Item Level):  
+• Activity_Type  (Dropdown: Flight, Hotel, Tour, Transfer, Meal, Free 
+Time)  
+• Confirmation_Number  (Text)  
+• Vendor_Contact  (Text/Phone)  
+• Cost_Per_Item  (Currency)  
+• Verification:  A sample itinerary can be generated from a test project, demonstrating 
+correct data population, formatting  and export functionality.  
+Data Migration Strategy  
+This outlines the detailed process for transferring existing client and vendor data into the new 
+system, ensuring data integrity and completeness.  
+Data Extraction from Legacy Systems  
+• Action:  Extract all relevant client profiles, historical booking data  and vendor 
+contracts from existing manual spreadsheets (e.g., Excel, Google Sheets) and 
+disconnected applications (e.g., individual calendar apps, email archives).  
+• Responsibility:  Project Lead er with support from Travel Coordinators.  
+• Details:  
+◦ Client Data:  Consolidate client names, emails, phone numbers, passport 
+details, dietary restrictions  and historical travel preferences into a single CSV 
+or Excel file.  
+◦ Vendor Data:  Compile vendor names, contact information, service types, 
+contract terms  and payment details into a separate CSV or Excel file.  
+◦ Data Cleaning:  Remove duplicate entries, correct formatting errors  and 
+standardize data ( date formats, currency symbols) to ensure compatibility with 
+the new SaaS platform.  
+• Verification:  Generate a report of extracted data counts and conduct manual spot 
+checks for accuracy.  
+
+Data Mapping and Import  
+• Action:  Map extracted data fields to the corresponding custom fields created within 
+the new SaaS platform.  
+• Responsibility:  Project Lead er 
+• Details:  
+◦ Utilize the platform's bulk import tools (e.g., CSV import, API -based import if 
+available) to transfer cleaned client and vendor data.  
+◦ Prioritize active client data and current vendor contracts for the initial 
+migration (FR -01). 
+◦ Mapping Example:  
+• Legacy_Client_Name  -> Client_Name  (SaaS Custom Field)  
+• Legacy_Passport_Num  -> Passport_Details  (SaaS Custom Field)  
+• Legacy_Vendor_Type  -> ServiceType  (SaaS Custom Field)  
+• Verification:  Conduct comprehensive spot checks on imported data for a 
+representative sample (e.g., 10 -20% of records) to ensure accuracy, completeness  and 
+correct field assignment. Cross -reference with original source data.  
+ 
+Integration with External Services  
+This details the configuration of integrations with external communication and scheduling 
+tools.  
+ 
+Email and Calendar Synchronization  
+• Action:  Configure native or API -based integrations with standard email clients 
+(Outlook/Gmail) and calendar applications.  
+• Responsibility:  Project Lead er 
+• Details:  
+◦ Email Integration:  Set up automated email parsing for incoming client 
+inquiries to automatically create new project tasks or update existing ones. 
+Configure outgoing email templates for client communication ( itinerary drafts, 
+booking confirmations).  
+◦ Calendar Integration:  Synchronize project deadlines, task due dates  and 
+vendor confirmation dates with Travel Coordinators' individual calendars. 
+This supports NFR -04 (Accessibility) and enhances FR -05 (Vendor 
+Management) by providing timely alerts.  
+• Verification:  Test automated email parsing by sending sample inquiries. Verify that 
+project deadlines and task due dates appear correctly in integrated calendars.  
+ 
+ 
+ 
+ 
+ 
+
+Advanced Workflow Configuration and Automation Logic  
+This details the setup of automated workflows and reporting to enhance efficiency and 
+oversight.  
+ 
+Task Dependency and Automation Rules  
+• Action:  Configure task dependencies and implement automation rules within project 
+templates to streamline workflows.  
+• Responsibility:  Project Lead er 
+• Details:  
+◦ Dependency Logic:  Ensure that tasks are linked logically (e.g., "Hotel 
+Booking Confirmed" must precede "Itinerary Sent"). The system should 
+prevent marking a dependent task as complete if its prerequisite is not met 
+(FR-03). 
+◦ Automation Rules (Examples):  
+• Rule 1:  IF Project_Status changes to "Confirmed" THEN Send 
+automated welcome email to Client.  
+• Rule 2:  IF Task_Due_Date is 2 days away AND Task_Status is 
+"Pending" THEN Notify Assigned_Coordinator.  
+• Rule 3:  IF Vendor_Payment_Due_Date is 1 day away THEN Create 
+reminder task for Project Lead.  
+• Rule 4:  IF Client_Inquiry_Received THEN Start timer for NFR -01 (4 -
+hour response time).  
+• Verification:  Create test projects and trigger automation rules to confirm they execute 
+as expected and dependencies are enforced.  
+ 
+Reporting and Dashboard Setup  
+• Action:  Configure management dashboards and custom reports to display key 
+performance indicators (KPIs) and provide real -time operational insights.  
+• Responsibility:  Project Lead er 
+• Details:  
+◦ Dashboard Views : Create separate dashboard views for Travel Coordinators 
+(focus on individual workload, upcoming tasks) and Management (focus on 
+overall project status, team capacity, NFR -01/NFR -02 metrics).  
+◦ Custom Reports:  Develop reports to track:  
+• Average client response time (to monitor NFR -01). 
+• Number of scheduling/booking errors (to monitor NFR -02). 
+• Current project load per coordinator.  
+• Upcoming vendor payment deadlines.  
+• Verification:  Management can access and interpret dashboard data accurately  and 
+custom reports generate correct data based on test scenarios.  
+ 
+
+Development Roadmap (3 -Week Implementation Window)  
+This provides a granular timeline for the configuration and development tasks, aligning with 
+the project's strict 3 -week implementation window.  
+ 
+Week  Key Activities  Deliverables  Responsible  Dependencies  
+Week 1: Foundation 
+& Data  Platform Setup: SaaS 
+subscription, Admin 
+account setup. User 
+Management: Create all 
+user accounts, assign 
+roles/permissions. 
+Custom Fields: Define all 
+project and itinerary -level 
+custom fields. Data 
+Extraction: Extract and 
+clean legacy 
+client/vendor data. Data 
+Import: Perform initial 
+bulk import of cleaned 
+data.  Configured SaaS 
+environment, User 
+accounts ready, defined 
+custom fields, cleaned 
+data files, Imported 
+client/vendor data.  Project Lead er SaaS platform 
+access, clean legacy 
+data.  
+Week 2: Templates 
+& Integrations  Project Templates: Create 
+Standard Vacation 
+Project template with 
+tasks/milestones. 
+Itinerary Templates: 
+Design and configure 
+dynamic itinerary draft 
+template. Email/Calendar 
+Integration: Set up and 
+test external API 
+integrations. Basic 
+Automation: Impleme nt 
+core automation rules 
+(e.g., status changes, 
+basic notifications).  Standard Project 
+Template, Itinerary 
+Template, Working 
+email/calendar sync, 
+Initial automation rules.  Project Lead er Week 1 
+completion.  
+Week 3: Workflows 
+& Reporting  Advanced Automation: 
+Configure task 
+dependencies, complex 
+automation rules. 
+Dashboard/Reports: Set 
+up management 
+dashboards and custom 
+performance reports. Pilot 
+Testing Prep: Prepare test 
+cases and data for pilot 
+project. Training 
+Materials Review: 
+Review  draft user manual 
+and training content.  Full automation suite, 
+Operational dashboards, 
+Test plan for pilot, 
+Reviewed training 
+materials.  Project Lead er Week 2 
+completion.  
+ 
+
+Conclusion  
+This document Product Development & Configuration Guide provides the detailed technical 
+instructions and a clear roadmap for implementing the Automated Client Booking and 
+Itinerary Management System. By following these steps, IsleGo Travel & Logistics will 
+successfully transition to a more efficient, automated, and scalable operational model. This 
+document is intended to facilitate the precise execution of the system's development and 
+configuration.  

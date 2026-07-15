@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content-card">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="h3 mb-1">Update Booking</h2>
+            <p class="text-muted mb-0">Refine itinerary details and client information for this reservation.</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">Back to Dashboard</a>
+    </div>
+
+    <form method="post">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Booking Code</label>
+                <input name="booking_code" class="form-control" value="{{ booking.booking_code }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Destination</label>
+                <input name="destination" class="form-control" value="{{ booking.destination }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Travel Date</label>
+                <input type="date" name="travel_date" class="form-control" value="{{ booking.travel_date }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Status</label>
+                <select name="status" class="form-select">
+                    <option {% if booking.status == 'Pending' %}selected{% endif %}>Pending</option>
+                    <option {% if booking.status == 'Confirmed' %}selected{% endif %}>Confirmed</option>
+                    <option {% if booking.status == 'Cancelled' %}selected{% endif %}>Cancelled</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Client Name</label>
+                <input name="client_name" class="form-control" value="{{ booking.client.name }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Client Email</label>
+                <input type="email" name="client_email" class="form-control" value="{{ booking.client.email }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Client Phone</label>
+                <input name="client_phone" class="form-control" value="{{ booking.client.phone }}" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label fw-semibold">Company</label>
+                <input name="client_company" class="form-control" value="{{ booking.client.company }}">
+            </div>
+            <div class="col-12">
+                <label class="form-label fw-semibold">Trip Notes</label>
+                <textarea name="notes" class="form-control" rows="4">{{ booking.notes }}</textarea>
+            </div>
+        </div>
+        <div class="mt-4 d-flex gap-2">
+            <button class="btn btn-primary" type="submit">Update Booking</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
